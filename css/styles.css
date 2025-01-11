@@ -164,7 +164,7 @@ button:focus{
 .p-ad {
     margin: 5px;
    font-size: 1.27rem;
-   font-family: fantasy;
+   /*font-family: fantasy;*/
 }
 
 .title {
