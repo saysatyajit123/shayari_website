@@ -31,7 +31,7 @@ for (let i = 1; i <= gint; i++) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('../data/data.json', { cache: 'no-store' })
+    fetch('../data/data.json')
         .then(response => response.json())
         .then(data => {
             const jsonData = data[shayari_id];
