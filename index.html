@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="icon/shayari_andas1.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3;url=shayari/pyaar_shayari.html">
+    <link rel="preload" as="image" href="icon/app_icon1.png">
+    <link rel="preload" as="image" href="icon/loading.gif">
+    <link rel="preload" as="image" href="icon/heart-fill.svg">
+    <link rel="preload" as="image" href="icon/bookmarks-fill.svg">
+    <title>Shayari Andas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+/*             background-color: #106817; */
+            background-color: #FFE4E1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            z-index: 9999;
+        }
+
+        .animated-text {
+            font-size: 2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid white;
+            animation: typing 3s steps(60) infinite, blink 0.1s step-end infinite;
+            /* animation: typing 2s steps(20) infinite; */
+
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 16ch; /* Adjust to the number of characters to display */
+            }
+        }
+
+        @keyframes blink {
+            from {
+                border-right-color: white;
+            }
+            to {
+                border-right-color: transparent;
+            }
+        }
+        
+        /* #splash_android {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ca2f2f;
+            font-size: 24px;
+            z-index: 9999;
+        } */
+
+        /* #splash_laptop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #8f1e1e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ca2f2f;
+            font-size: 24px;
+            z-index: 9999;
+        } */
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YBJL3ZPXEQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-YBJL3ZPXEQ');
+    </script>
+</head>
+<body>
+
+<!-- Include the scripts -->
+<script src="js/jquery-3.6.0.min.js"></script>
+
+<!-- splash screen for android -->
+<div id='splash_android'></div>
+
+<!-- splash screen for laptop -->
+<div id='splash_laptop'></div>
+
+<!-- <div id="home2"></div> -->
+
+
+
+<script>
+     // Function to check if the user is using a mobile device
+     function isMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    // Check if the user is using a mobile device
+    var isMobile = isMobileDevice();
+
+    // Redirect to the appropriate form based on the device type
+    if (isMobile) {
+
+        includeHTML('shayari/laptop_splash.html', 'splash_android');
+
+    } else {
+        // Include the header content
+        includeHTML('shayari/laptop_splash.html', 'splash_laptop');
+
+        // Redirect to form1 for non-mobile devices
+    }
+
+    // Simulate a delay for loading content (replace with your actual content loading logic)
+    // setInterval(function () {
+    //     // Hide the splash screen
+    //     document.getElementById('splash_android').style.display = 'none';
+    //     document.getElementById('splash_laptop').style.display = 'none';
+    //     // Redirect to shayari_home_page
+    //     window.location.href = 'shayari/pyaar_shayari.html';
+
+    // }, 3000); // Simulating a delay of 2 seconds for loading content
+
+    // Function to include HTML content dynamically
+    function includeHTML(url, elementId) {
+        var element = document.getElementById(elementId);
+        if (element) {
+            $.get(url, function(data) {
+                element.innerHTML = data;
+            });
+        }
+    }
+</script>
+
+</body>
+</html>

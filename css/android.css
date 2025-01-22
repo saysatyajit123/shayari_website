@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFE4E1;
+
+}
+.android-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(80 47 105);
+    box-shadow: 0 4px 8px rgb(69 63 63 / 74%);
+    display: flex; /* Enables flexbox for centering */
+    align-items: center; /* Centers items vertically */
+    padding: 0 10px; /* Optional padding for aesthetics */
+    z-index: 1000; /* Ensures header is above other elements */
+    box-sizing: border-box;
+}
+.android-header button {
+    width: 55px;
+    height: 95%;
+    border: none;
+    background-color: transparent;
+    background-position: 15%;
+    background-image: url(../icon/menu.png);
+    background-repeat: no-repeat;
+    background-size: 42px 85%;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+}
+.android-header button:active {
+    opacity: 0.85;
+}
+.android-header h3 {
+    color: white; /* Optional: Makes the text visible against the blue background */
+    margin: 0; /* Removes default margin for perfect centering */
+    font-size: larger;
+}
+#laptopmenu {
+    display: none;
+}
+#android-header{
+    display: flex;
+}
+/* refresh css */
+/* spinner */
+#loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 30%; */
+    /* height: 100vh; */
+    padding-top: 100px;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+#loading-spinner img {
+    width: 30px;
+    height: 30px;
+}
+/* main container css */
+#main-container {
+    overflow-y: hidden;
+    padding-top: 50px;
+    min-height: 70vh;
+}
+.drawer {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    max-width: 400px;
+    min-width: 300px;
+/*     height: 35%; */
+    height: 25%;
+    padding: 20px;
+    background-color: rgb(80 47 105);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    -webkit-tap-highlight-color: transparent !important;
+    border-radius: 8px;
+    z-index: 999;
+    transition: transform 0.5s ease-in-out;
+}
+.drawer.show {
+    display: block;
+    transform: translate(-50%, 75%);
+}
+
+/* .drawer-content {
+    text-align: center;
+} */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.drawer-content div a {
+    font-family: serif;
+    font-size: 18px;
+    color: #d5d5d5;
+    text-decoration: none;
+    padding: 5px;
+}

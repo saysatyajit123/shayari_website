@@ -1,0 +1,194 @@
+* { user-select: none; }
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border: none;
+}
+
+html{
+    scrollbar-color: transparent transparent;
+}
+.visible-after-spinner {
+    display: none;
+}
+.card {
+    background-color: #FFE4B5;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* box-shadow: 0 4px 8px rgb(0 0 0 / 74%); */
+    /* box-shadow: 0 4px 8px  #5e4343; */
+    /* box-shadow: 0 4px 8px #4d373773; */
+    margin: 20px 0;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+@media only screen and (max-width: 481px) {
+    .card {box-shadow: 0 4px 8px rgb(0 0 0 / 74%);}
+}
+@media only screen and (min-width: 481px) {
+    .card {box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+}
+
+.card-content {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* main css starting */
+.container  {
+    margin: auto;
+    max-width: 400px;
+}
+
+.button-container {
+    display: flex;
+    margin-top: 5px;
+}
+
+.btn {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    margin-right: 10px;
+    border-radius: 5px 20px;
+    text-decoration: none;;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    border-style: none;
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+}
+
+/* .copy-btn {
+    background-color: #007bff;
+    background-image: url(icon/copy.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 20px 20px;
+    margin-right: 25px;
+} */
+
+.copy-btn {
+    background-color: #007bff;
+    background-image: url(../icon/copy.svg);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position-x: center;
+    background-position-y: center;
+    /* font-size: 23px; */
+    /* text-align: center; */
+}
+
+.copy-btn:hover {
+    background-color: #0056b3;
+}
+
+.like-btn {
+    background-color: transparent;
+}
+
+.bi-heart {
+    background-image: url(../icon/heart.svg);
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    background-position-x: center;
+    background-position-y: center;
+}
+.bi-heart-fill {
+    /* color: red; */
+    background-image: url(../icon/heart-fill.svg);
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+/* .like-btn.bi-heart { */
+    /* background-color: #28a745; */
+    /* margin-right: 0; */
+/* } */
+
+/* .like-btn.bi-heart:hover {
+    background-color: #218838;
+} */
+
+/* .like-btn.bi-heart-fill {
+    background-color: white;
+} */
+
+/* .like-btn.bi-heart-fill:hover {
+    background-color: blueviolet;
+} */
+
+.whatsapp-btn {
+    background-color: #25d366;
+    background-image: url(../icon/WhatsApp.png);
+    background-repeat: no-repeat;
+    pointer-events: fill;
+    background-size: 25px 25px;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.whatsapp-btn:hover {
+    background-color: #20c659;
+}
+
+.save-btn {
+    background-color: #C13584; /*#e4405f*/
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position-x: center;
+    background-position-y: center;
+    /* pointer-events: ; */
+    /* font-size: 23px; */
+    /* text-align: center; */
+    /* margin-right: 25px; */
+}
+.bi-bookmarks {
+    background-image: url(../icon/bookmarks.svg);
+}
+.bi-bookmarks-fill {
+    background-image: url(../icon/bookmarks-fill.svg);
+}
+
+.save-btn:hover {
+    background-color: #d7355b;
+}
+
+/* button:hover,
+button:focus{
+    outline: none;
+    border: none;
+    outline-style:none;
+} */
+
+.p-ad {
+    margin: 5px;
+   font-size: 1.27rem;
+   /*font-family: fantasy;*/
+}
+
+.title {
+    font-style: italic;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+/* #laptopmenu {
+    width: 20%;
+    height: 70%;
+    background-color: #FFE4B5;
+    position: fixed; 
+    right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+
+} */
+
